@@ -1,0 +1,10 @@
+#Python
+.pytest_cache
+.eggs
+src/pycli.egg-info
+
+#Idea
+.idea
+*.iml
+*.ipr
+*.iws
