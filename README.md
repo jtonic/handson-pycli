@@ -10,11 +10,13 @@
 - [x] create a simple main (bootstrap)
 - [x] create a simple test
 - [x] Simple @dataclass
+- [ ] pytest-bdd gherkin example (test the support in idea)
 - [ ] simple cli command with click
 - [ ] configure the pylint
-- [ ] create a python script
+- [ ] create a python script for simple py-cli
 - [ ] publish the python script on pypi
 - [ ] create github actions to build the application run the tests
+- [ ] run test with different pyenv/virtualenv configurations with tox
 
 ## Howto
 
