@@ -9,7 +9,7 @@
 - [x] setup in IntelliJ Idea
 - [x] create a simple main (bootstrap)
 - [x] create a simple test
-- [ ] @dataclass
+- [x] Simple @dataclass
 - [ ] simple cli command with click
 - [ ] configure the pylint
 - [ ] create a python script

@@ -38,3 +38,5 @@
 
 - [pyenv intro](https://realpython.com/intro-to-pyenv/)
 - [visual pytest-ing in Idea/Pycharm](https://blog.jetbrains.com/pycharm/2020/06/visual-testing-with-pytest/)
+- [String formatting](https://realpython.com/python-string-formatting/)
+- [String dataclasses](https://docs.python.org/3/library/dataclasses.html)

@@ -1,2 +1,7 @@
+from dataclasses import dataclass
+
+
+@dataclass
 class Teacher:
-    pass
+    firstName: str
+    lastName: str

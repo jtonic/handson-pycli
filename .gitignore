@@ -4,7 +4,8 @@
 src/pycli.egg-info
 
 #Idea
-.idea
+.idea/*
+!.idea/runConfigurations
 *.iml
 *.ipr
 *.iws
