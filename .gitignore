@@ -2,6 +2,8 @@
 .pytest_cache
 .eggs
 src/pycli.egg-info
+dist/
+build/
 
 #Idea
 .idea/*

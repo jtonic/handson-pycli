@@ -28,6 +28,12 @@
 
 - `pyenv virtualenvs` show all virtual environments
 
+## How to create the source and wheel distributions 
+
+- `python -m pip install --upgrade pip setuptools wheel` upgrade pip, setuptools and wheel 
+
+- `python setup.py sdist bdist_wheel` create the distributions
+
 ## Python useful commands
 
 - run pip with python `python -m pip --version`
