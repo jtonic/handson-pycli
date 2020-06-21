@@ -8,10 +8,12 @@ setup(
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     python_requires='>=3.6, <4',
-    install_requires=['click'],  # Optional
+    install_requires=['click', 'pyyaml'],
     setup_requires=['pytest-runner'],
     extras_require=dict(tests=['pytest']),
-
+    package_data={
+        '': ['*.yaml']
+    },
     entry_points={  # Optional
       'console_scripts': [
         'pycli=pycli:main',

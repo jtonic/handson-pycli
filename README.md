@@ -10,7 +10,8 @@
 - [x] create a simple main (bootstrap)
 - [x] create a simple test
 - [x] Simple @dataclass
-- [x] Create the source and wheel binary distributions 
+- [x] Create the source and wheel binary distributions
+- [x] Load and parse a yaml file to a custom python type (class) 
 - [ ] Include data files (from packages and from file system) in the source and binary distributions
 - [ ] run test with different pyenv/virtualenv configurations with tox
 - [ ] simple cli command with click
