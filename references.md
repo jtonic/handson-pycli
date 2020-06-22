@@ -55,3 +55,4 @@
 - [pytest gherkin](https://pypi.org/project/pytest-bdd/#:~:text=pytest-bdd%20implements%20a%20subset,power%20and%20flexibility%20of%20pytest.)
 - [pytest-bdd](https://github.com/pytest-dev/pytest-bdd)
 - [pytest-bdd in pycharm/idea](https://blog.jetbrains.com/pycharm/2018/08/pycharm-and-pytest-bdd/)
+- [python cli with click](https://click.palletsprojects.com/en/7.x/)

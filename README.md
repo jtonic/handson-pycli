@@ -12,9 +12,10 @@
 - [x] Simple @dataclass
 - [x] Create the source and wheel binary distributions
 - [x] Load and parse a yaml file to a custom python type (class) 
-- [ ] Include data files (from packages and from file system) in the source and binary distributions
-- [ ] run test with different pyenv/virtualenv configurations with tox
+- [x] Include data files from packages in the source and binary distributions
 - [ ] simple cli command with click
+- [ ] Include data files from file system in the source and binary distributions
+- [ ] run test with different pyenv/virtualenv configurations with tox
 - [ ] configure the pylint
 - [ ] pytest-bdd gherkin example (test the support in idea)
 - [ ] create a python script for simple py-cli
