@@ -1,3 +1,6 @@
+from pycli import cli
+
+
 def main():
-    """Entry point for the application script"""
-    print("Call your main application code here")
+    """The entry point for the cli application"""
+    cli.hello()

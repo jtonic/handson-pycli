@@ -13,7 +13,7 @@
 - [x] Create the source and wheel binary distributions
 - [x] Load and parse a yaml file to a custom python type (class) 
 - [x] Include data files from packages in the source and binary distributions
-- [ ] simple cli command with click
+- [x] simple cli command with click
 - [ ] Include data files from file system in the source and binary distributions
 - [ ] run test with different pyenv/virtualenv configurations with tox
 - [ ] configure the pylint
@@ -40,6 +40,17 @@
 
 - run tests `pytest` 
 
+- run pycli command
+
+    `pycli --help`
+    
+    `pycli --count=3 --name=Tony` or
+    
+    `pycli --count 3 --name Tony` or
+    
+    `pycli -c 3 -n Tony` or
+    
+    interactively: `pycli -c 3`, `pycli`
 
 Caveats:
 
