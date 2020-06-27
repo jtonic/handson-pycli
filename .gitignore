@@ -4,6 +4,8 @@
 src/pycli.egg-info
 dist/
 build/
+.tox/
+.run/
 
 #Idea
 .idea/*
