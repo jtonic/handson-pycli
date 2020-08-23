@@ -9,6 +9,9 @@ CONFIG_PATH = path.join(ROOT_DIR, 'application.yaml')
 
 @dataclass
 class Application(yaml.YAMLObject):
+    """
+    Application configuration data class
+    """
     yaml_tag = '!application'
 
     name: str

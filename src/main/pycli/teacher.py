@@ -1,7 +1,10 @@
-from dataclasses import dataclass
+"""
+Teacher module.
+"""
 
+from dataclasses import dataclass
 
 @dataclass
 class Teacher:
-    firstName: str
-    lastName: str
+    first_name: str
+    last_name: str

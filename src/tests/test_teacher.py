@@ -6,5 +6,5 @@ def test_teacher():
 
     print(f'Teacher: {tony_teacher}')
 
-    assert "Antonel" == tony_teacher.firstName
-    assert "Pazargic" == tony_teacher.lastName
+    assert "Antonel" == tony_teacher.first_name
+    assert "Pazargic" == tony_teacher.last_name

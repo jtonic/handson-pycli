@@ -15,7 +15,8 @@ build/
 # Python distribution
 pycli.egg-info/
 
-# Tests
+# Tests and lint
 tests_report.html
 .coverage
 htmlcov/
+pylint.html

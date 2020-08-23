@@ -1,0 +1,8 @@
+[MASTER]
+load-plugins=pylint_json2html
+disable=
+    C0114, # missing-module-docstring
+
+[REPORTS]
+# output-format=jsonextended
+output-format=json

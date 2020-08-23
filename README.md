@@ -32,19 +32,21 @@
   $ pycli 
 ```
 
-- install the extra tests pytest dependency
+- install the extras test and lint dependencies
 
-    `pip install -e '.[tests]'` (for sh), or 
-    
-    `pip install -e .[tests]` (shell)
+```shell script
+    pip install -e '.[tests,lint]' # sh
+    # OR
+    pip install -e .[tests,lint] # shell 
+```
 
 - run tests 
 
-`pytest`
-
-or 
-
-`pytest --html=tests_report.html` 
+```shell script
+pytest
+# OR
+pytest --html=tests_report.html
+```
 
 - run pycli command
 
@@ -57,6 +59,14 @@ or
     `pycli -c 3 -n Tony` or
     
     interactively: `pycli -c 3`, `pycli`
+
+- run pylint 
+
+```shell script
+  pylint src/main/pycli/ --output-format=text
+  # or run it with html report
+  pylint src/main/pycli/ | pylint-json2html -o pylint.html
+```
 
 Caveats:
 
