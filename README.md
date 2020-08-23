@@ -16,11 +16,11 @@
 - [x] simple cli command with click
 - [ ] Include data files from file system in the source and binary distributions
 - [ ] run test with different pyenv/virtualenv configurations with tox
-- [ ] configure the pylint
+- [x] configure the pylint
 - [ ] pytest-bdd gherkin example (test the support in idea)
 - [ ] create a python script for simple py-cli
 - [ ] publish the python script on pypi
-- [ ] create github actions to build the application run the tests
+- [x] create github actions to build the application run the tests
 
 ## Howto
 
@@ -32,33 +32,36 @@
   $ pycli 
 ```
 
-- install the extras test and lint dependencies
+- install the dev dependencies
 
 ```shell script
-    pip install -e '.[tests,lint]' # sh
+    pip install -e '.[dev]' # sh
     # OR
-    pip install -e .[tests,lint] # shell 
+    pip install -e .[dev] # shell 
+    # OR even better
+    pip install -r requirements.txt
 ```
 
 - run tests 
 
 ```shell script
-pytest
-# OR
-pytest --html=tests_report.html
+    pytest
+    # OR
+    pytest --html=tests_report.html
 ```
 
 - run pycli command
 
-    `pycli --help`
-    
-    `pycli --count=3 --name=Tony` or
-    
-    `pycli --count 3 --name Tony` or
-    
-    `pycli -c 3 -n Tony` or
-    
-    interactively: `pycli -c 3`, `pycli`
+```shell script
+    pycli --help
+    # or
+    pycli --count=3 --name=Tony
+    # or
+    pycli -c 3 -n Tony
+    # or interactively
+    pycli -c 3
+    pycli
+```
 
 - run pylint 
 
