@@ -11,3 +11,11 @@ build/
 *.iml
 *.ipr
 *.iws
+
+# Python distribution
+pycli.egg-info/
+
+# Tests
+tests_report.html
+.coverage
+htmlcov/

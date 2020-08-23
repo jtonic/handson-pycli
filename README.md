@@ -38,7 +38,13 @@
     
     `pip install -e .[tests]` (shell)
 
-- run tests `pytest` 
+- run tests 
+
+`pytest`
+
+or 
+
+`pytest --html=tests_report.html` 
 
 - run pycli command
 

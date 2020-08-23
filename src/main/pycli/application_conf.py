@@ -1,10 +1,10 @@
-import os
 from dataclasses import dataclass
+from os import path
 
 import yaml
 from pycli.definitions import ROOT_DIR
 
-CONFIG_PATH = os.path.join(ROOT_DIR, 'application.yaml')
+CONFIG_PATH = path.join(ROOT_DIR, 'application.yaml')
 
 
 @dataclass
@@ -22,7 +22,7 @@ def parse(conf: dict) -> Application:
 
 def load_conf() -> Application:
     with open(CONFIG_PATH) as file:
-        yaml.add_path_resolver('!application', ['application'], dict)
+        yaml.add_path_resolver(tag='!application', path=['application'], kind=dict)
         conf = yaml.load(file, Loader=yaml.FullLoader)
         print(conf)
         cfg: Application = parse(conf)
