@@ -18,7 +18,7 @@
 - [ ] run test with different pyenv/virtualenv configurations with tox
 - [x] configure the pylint
 - [ ] pytest-bdd gherkin example (test the support in idea)
-- [ ] create a python script for simple py-cli
+- [x] create a python script for simple py-cli
 - [ ] publish the python script on pypi
 - [x] create github actions to build the application run the tests
 
