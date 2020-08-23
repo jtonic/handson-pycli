@@ -6,13 +6,20 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    name: Build - Python ${{ python-version }} on ${{ matrix.operating-system }}:${{ matrix.architecture }}
+
+    strategy:
+        matrix:
+            operating-system: [ ubuntu-latest, macOS-latest ]
+            python-version: [ 3.6, 3.7, 3.8 ]
+            architecture: [ 'x64' ]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8
+    - name: Set up Python ${{ python-version }}
       uses: actions/setup-python@v1
       with:
-        python-version: 3.8
+        python-version: ${{ python-version }}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
