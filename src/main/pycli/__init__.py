@@ -22,7 +22,7 @@ def _hello(count: int, name: str):
               required=True)
 @click.option('-b', prompt='b', help='2nd operand', type=int,
               required=True)
-def _sum(a: int, b: int):
+def _sum(a: int, b: int):  # pylint: disable=C0103
     """
     Sum a and b.
 
