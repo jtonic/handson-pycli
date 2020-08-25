@@ -1,5 +1,6 @@
 import click
 import click_completion
+from pycli.template import render
 
 click_completion.init()
 
@@ -45,7 +46,5 @@ def _sum(a: int, b: int):  # pylint: disable=C0103
               help='Template file', type=str, required=True, show_default=True)
 def produce_message(templates_dir: str, template_file: str):
     """Produce a message by rendering a template"""
-    from pycli.template import render
-
     content = render(templates_dir=templates_dir, template_file=template_file)
     click.echo(f"Rendered content: {content}")
