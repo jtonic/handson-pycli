@@ -56,3 +56,5 @@
 - [pytest-bdd](https://github.com/pytest-dev/pytest-bdd)
 - [pytest-bdd in pycharm/idea](https://blog.jetbrains.com/pycharm/2018/08/pycharm-and-pytest-bdd/)
 - [python cli with click](https://click.palletsprojects.com/en/7.x/)
+- [Jinja2 templates](https://jinja.palletsprojects.com/en/2.11.x/templates/)
+- [Jinja2 API](https://jinja.palletsprojects.com/en/2.11.x/api/#basics)
