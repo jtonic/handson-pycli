@@ -14,6 +14,7 @@
 - [x] Load and parse a yaml file to a custom python type (class) 
 - [x] Include data files from packages in the source and binary distributions
 - [x] simple cli command with click
+- [x] simple cli to render a Jinja2 template
 - [ ] Include data files from file system in the source and binary distributions
 - [ ] run test with different pyenv/virtualenv configurations with tox
 - [x] configure the pylint
@@ -21,6 +22,7 @@
 - [x] create a python script for simple py-cli
 - [ ] publish the python script on pypi
 - [x] create github actions to build the application run the tests
+
 
 ## Howto
 

@@ -4,10 +4,10 @@ from jinja2 import Environment, FileSystemLoader
 from pycli.definitions import ROOT_DIR
 
 
-def render():
-    templates_dir = path.join(ROOT_DIR, 'templates')
+def render(templates_dir, template_file):
+    templates_dir = path.join(ROOT_DIR, templates_dir)
     file_loader = FileSystemLoader(templates_dir)
     env = Environment(loader=file_loader)
-    template = env.get_template('index.html')
+    template = env.get_template(template_file)
     html = template.render({'title': 'Tool', 'header': 'Menu', 'body': 'CD Pipeline'})
     return html

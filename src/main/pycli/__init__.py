@@ -39,9 +39,13 @@ def _sum(a: int, b: int):  # pylint: disable=C0103
 
 
 @main.command("produce-message")
-def produce_message():
+@click.option('--templates-dir', default='templates', prompt='Templates directory',
+              help='Templates dir', type=str, required=True, show_default=True)
+@click.option('--template-file', default='index.html.j2', prompt='Template file',
+              help='Template file', type=str, required=True, show_default=True)
+def produce_message(templates_dir: str, template_file: str):
     """Produce a message by rendering a template"""
     from pycli.template import render
 
-    content = render()
+    content = render(templates_dir=templates_dir, template_file=template_file)
     click.echo(f"Rendered content: {content}")
