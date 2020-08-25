@@ -33,3 +33,12 @@ def _sum(a: int, b: int):  # pylint: disable=C0103
     :return: the sum
     """
     click.echo(a + b)
+
+
+@main.command("produce-message")
+def produce_message():
+    """Produce a message by rendering a template"""
+    from pycli.template import render
+
+    content = render()
+    click.echo(f"Rendered content: {content}")

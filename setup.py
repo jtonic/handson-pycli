@@ -11,7 +11,8 @@ setup(
     package_dir={'': 'src/main'},
     python_requires='>=3.6, <4',
     install_requires=[
-        'click>=7.1.2', 'pyyaml>=5.3.1', 'dataclasses==0.6'
+        'click>=7.1.2', 'pyyaml>=5.3.1', 'dataclasses==0.6',
+        'Jinja2>=2.11.2'
     ],
     setup_requires=['pytest-runner>=5.2'],
     extras_require=dict(
@@ -21,7 +22,7 @@ setup(
             ]
     ),
     package_data={
-        '': ['*.yaml']
+        '': ['*.yaml', '*.html']
     },
     entry_points={  # Optional
       'console_scripts': [
