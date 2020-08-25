@@ -63,6 +63,20 @@
     pycli
 ```
 
+- enable shell completion 
+
+  - Run the following in the terminal 
+```shell script
+eval "$(_PYCLI_COMPLETE=source pycli)"
+```
+  - or add it in .bashrc file
+  
+  Note: Further about this at:
+  
+  - [here](https://click.palletsprojects.com/en/6.x/bashcomplete/#activation)
+  - [here](https://stackoverflow.com/a/52286575/1102761)
+
+
 - run pylint 
 
 ```shell script

@@ -1,4 +1,7 @@
 import click
+import click_completion
+
+click_completion.init()
 
 
 @click.group()

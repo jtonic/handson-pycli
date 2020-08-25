@@ -18,7 +18,7 @@ setup(
     extras_require=dict(
         dev=[
             'pytest>=6.0.0', "pytest-html>=2.1.1", "pytest-cov>=2.10.1",
-            'pylint>=2.6.0', 'pylint-json2html>=0.2.0'
+            'pylint>=2.6.0', 'pylint-json2html>=0.2.0', 'click-completion==0.5.2'
             ]
     ),
     package_data={
