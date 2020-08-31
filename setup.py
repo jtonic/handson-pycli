@@ -11,14 +11,15 @@ setup(
     package_dir={'': 'src/main'},
     python_requires='>=3.6, <4',
     install_requires=[
-        'click>=7.1.2', 'pyyaml>=5.3.1', 'dataclasses==0.6',
-        'Jinja2>=2.11.2'
+        'click==7.1.2', 'pyyaml==5.3.1', 'dataclasses==0.6',
+        'Jinja2==2.11.2'
     ],
     setup_requires=['pytest-runner>=5.2'],
     extras_require=dict(
         dev=[
-            'pytest>=6.0.0', "pytest-html>=2.1.1", "pytest-cov>=2.10.1",
-            'pylint>=2.6.0', 'pylint-json2html>=0.2.0', 'click-completion==0.5.2'
+            'pytest==6.0.0', "pytest-html==2.1.1", "pytest-cov==2.10.1",
+            'pylint==2.6.0', 'pylint-json2html==0.2.0', 'click-completion==0.5.2',
+            'mypy==0.782', 'pytest-mypy==0.7.0'
             ]
     ),
     package_data={
