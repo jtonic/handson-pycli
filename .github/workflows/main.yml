@@ -3,30 +3,29 @@ name: Main
 on: [push]
 
 jobs:
-  build:
+    build:
+        runs-on: ubuntu-latest
+        name: Build - Python ${{ matrix.python-version }} on ${{ matrix.operating-system }}:${{ matrix.architecture }}
 
-    runs-on: ubuntu-latest
-    name: Build - Python ${{ matrix.python-version }} on ${{ matrix.operating-system }}:${{ matrix.architecture }}
+        strategy:
+            matrix:
+                operating-system: [ubuntu-latest, macOS-latest]
+                python-version: [3.9, 3.10]
+                architecture: ["x64"]
 
-    strategy:
-        matrix:
-            operating-system: [ ubuntu-latest, macOS-latest ]
-            python-version: [ 3.6, 3.7, 3.8 ]
-            architecture: [ 'x64' ]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Run pylint
-      run: |
-        pylint src/main/pycli/ --output-format=text
-    - name: Run pytest
-      run: |
-        pytest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Set up Python ${{ matrix.python-version }}
+              uses: actions/setup-python@v1
+              with:
+                  python-version: ${{ matrix.python-version }}
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install -r requirements.txt
+            - name: Run pylint
+              run: |
+                  pylint src/main/pycli/ --output-format=text
+            - name: Run pytest
+              run: |
+                  pytest
