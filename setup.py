@@ -13,7 +13,7 @@ setup(
     python_requires=">=3.6, <4",
     install_requires=[
         "click==7.1.2",
-        "pyyaml==5.3.1",
+        "pyyaml==5.4",
         "dataclasses==0.6",
         "Jinja2==2.11.2",
     ],
