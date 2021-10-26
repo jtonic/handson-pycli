@@ -7,11 +7,12 @@
 - [x] src/pycli
 - [x] tests
 - [x] setup in IntelliJ Idea
+- [x] setup in vs code (I love its python development experience)
 - [x] create a simple main (bootstrap)
 - [x] create a simple test
 - [x] Simple @dataclass
 - [x] Create the source and wheel binary distributions
-- [x] Load and parse a yaml file to a custom python type (class) 
+- [x] Load and parse a yaml file to a custom python type (class)
 - [x] Include data files from packages in the source and binary distributions
 - [x] simple cli command with click
 - [x] simple cli to render a Jinja2 template
@@ -26,25 +27,33 @@
 
 ## Howto
 
-- Create the python script command
-
-```shell script
-  $ python -m pip install -e .
-  # restart shell
-  $ pycli 
-```
-
 - install the dev dependencies
 
 ```shell script
     pip install -e '.[dev]' # sh
     # OR
-    pip install -e .[dev] # shell 
+    pip install -e .[dev] # shell
     # OR even better
     pip install -r requirements.txt
 ```
 
-- run tests 
+- Create the python script command
+
+  - version 1
+  ```shell script
+    # build the executable pycli
+    $ python -m pip install -e .
+
+    # restart shell
+    $ pycli
+  ```
+  - version 2
+  ```shell script
+    # Run a cli command
+    $ python src/main/pycli/main.py hello --count=2
+  ```
+
+- run tests
 
 ```shell script
     pytest
@@ -65,21 +74,21 @@
     pycli
 ```
 
-- enable shell completion 
+- enable shell completion
 
-  - Run the following in the terminal 
+  - Run the following in the terminal
 ```shell script
 eval "$(_PYCLI_COMPLETE=source pycli)"
 ```
   - or add it in .bashrc file
-  
+
   Note: Further about this at:
-  
+
   - [here](https://click.palletsprojects.com/en/6.x/bashcomplete/#activation)
   - [here](https://stackoverflow.com/a/52286575/1102761)
 
 
-- run pylint 
+- run pylint
 
 ```shell script
   pylint src/main/pycli/ --output-format=text
@@ -96,19 +105,19 @@ Caveats:
     $ brew remove curl-openssl
     $ echo 'export PATH="/usr/local/opt/curl-openssl/bin:$PATH"' >> ~/.zshrc
     $ source ~/.zshrc
-    # or 
-    $ echo 'export PATH="/usr/local/opt/curl-openssl/bin:$PATH"' >> ~/.bash_profile  
+    # or
+    $ echo 'export PATH="/usr/local/opt/curl-openssl/bin:$PATH"' >> ~/.bash_profile
     $ source ~/.bash_profile
 ```
 
 - If somehow, after the pyenv virtualenv python installation the virtual env is not shown into terminal (after shell restart) then:
 
     - check to see if you have the following lines in ~/.bash_profile or ~/.zshrc
-    
+
 ```shell script
-export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$(pyenv root)/shims:$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv virtualenv-init -)"
 ```
 
 ## References

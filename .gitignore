@@ -4,6 +4,11 @@
 src/pycli.egg-info
 dist/
 build/
+__pycache__
+.pypy_cache
+pycli.egg-info/
+pylint.html
+
 
 #Idea
 .idea/*
@@ -12,11 +17,10 @@ build/
 *.ipr
 *.iws
 
-# Python distribution
-pycli.egg-info/
+# vs code
+.history/
 
 # Tests and lint
 tests_report.html
 .coverage
 htmlcov/
-pylint.html

@@ -1,6 +1,7 @@
 # Useful things
 
 ## pyenv useful commands
+---
 
 - `pyenv commands` - list commands
 
@@ -16,21 +17,21 @@
 
 - `pyenv version` - show current python version
 
-- `pyenv which python` 
+- `pyenv which python`
 
 - `pyenv which pip`
 
 - `pyenv local 3.8.2` set the current python for the project
 
-- `pyenv shell 3.9-dev` runa 
+- `pyenv shell 3.9-dev` runa
 
 - `pyenv virtualenv 3.8.2 pycli-python3.8.2` create a virtualenv
 
 - `pyenv virtualenvs` show all virtual environments
 
-## How to create the source and wheel distributions 
+## How to create the source and wheel distributions
 
-- `python -m pip install --upgrade pip setuptools wheel` upgrade pip, setuptools and wheel 
+- `python -m pip install --upgrade pip setuptools wheel` upgrade pip, setuptools and wheel
 
 - `python setup.py sdist bdist_wheel` create the distributions
 
@@ -42,6 +43,8 @@
 
 ## Documentation references
 
+- [pyenv issue when installed with brew](https://stackoverflow.com/a/34156303/1102761)
+- [setuptools - entry_points](https://stackoverflow.com/a/9615473/1102761)
 - [pyenv intro](https://realpython.com/intro-to-pyenv/)
 - [visual pytest-ing in Idea/Pycharm](https://blog.jetbrains.com/pycharm/2020/06/visual-testing-with-pytest/)
 - [String formatting](https://realpython.com/python-string-formatting/)
