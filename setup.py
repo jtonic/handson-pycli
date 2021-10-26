@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pycli",
-    version="0.1.3",
+    version="0.9.0",
     description="Py cli project",
     author="Antonel-Ernest Pazargic",
     author_email="antonel.pazargic@gmail.com",
@@ -12,22 +12,22 @@ setup(
     package_dir={"": "src/main"},
     python_requires=">=3.6, <4",
     install_requires=[
-        "click==7.1.2",
-        "pyyaml==5.3.1",
-        "dataclasses==0.6",
-        "Jinja2==2.11.2",
+        "click==8.0.3",
+        "pyyaml==6.0",
+        "dataclasses==0.6",  # Remove this backport because we use 3.7+
+        "Jinja2==3.0.2",
     ],
     setup_requires=["pytest-runner>=5.2"],
     extras_require=dict(
         dev=[
-            "pytest==6.0.0",
-            "pytest-html==2.1.1",
-            "pytest-cov==2.10.1",
-            "pylint==2.6.0",
-            "pylint-json2html==0.2.0",
+            "pytest==6.2.5",
+            "pytest-html==3.1.1",
+            "pytest-cov==3.0.0",
+            "pylint==2.11.1",
+            "pylint-json2html==0.3.0",
             "click-completion==0.5.2",
-            "mypy==0.782",
-            "pytest-mypy==0.7.0",
+            "mypy==0.910",
+            "pytest-mypy==0.8.1",
         ]
     ),
     package_data={"": ["*.yaml", "*.html"]},
