@@ -15,7 +15,7 @@ setup(
         "click==7.1.2",
         "pyyaml==5.3.1",
         "dataclasses==0.6",
-        "Jinja2==2.11.2",
+        "Jinja2==2.11.3",
     ],
     setup_requires=["pytest-runner>=5.2"],
     extras_require=dict(
