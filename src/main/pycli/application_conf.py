@@ -28,6 +28,7 @@ def load_conf() -> Application:
     with open(CONFIG_PATH) as file:
         yaml.add_path_resolver(tag="!application", path=["application"], kind=dict)
         conf = yaml.load(file, Loader=yaml.FullLoader)
-        print(conf)
+        print(f"Configuration: {conf}")
         cfg: Application = parse(conf)
+        print(f"Application: {cfg}")
         return cfg

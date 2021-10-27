@@ -11,9 +11,7 @@ def test_load_conf():
 
 
 def test_parse():
-    app = parse(
-        {"application": Application(name="PyCli", description="PyCli Application")}
-    )
+    app = parse({"application": Application(name="PyCli", description="PyCli Application")})
 
     assert app.name == "PyCli"
     assert app.description == APP_DESCRIPTION
