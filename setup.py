@@ -14,7 +14,6 @@ setup(
     install_requires=[
         "click==8.0.3",
         "pyyaml==6.0",
-        "dataclasses==0.6",  # Remove this backport because we use 3.7+
         "Jinja2==3.0.2",
     ],
     setup_requires=["pytest-runner>=5.2"],

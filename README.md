@@ -58,6 +58,10 @@
 ```shell script
     pytest
     # OR
+    pytest -s # to always show in the console the print calls
+    # OR
+    python -m pytest
+    # OR
     pytest --html=tests_report.html
 ```
 
