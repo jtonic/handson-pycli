@@ -13,8 +13,10 @@ setup(
     python_requires=">=3.6, <4",
     install_requires=[
         "click==8.0.3",
-        "pyyaml==6.0",
+        "pyyaml==5.3",
         "Jinja2==3.0.2",
+        "confluent-kafka==1.7.0",
+        "avro==1.11.0",
     ],
     setup_requires=["pytest-runner>=5.2"],
     extras_require=dict(
