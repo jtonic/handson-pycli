@@ -1,5 +1,17 @@
 [flake8]
 max-line-length=120
+max-complexity=10
 verbose=true
 ignore=
     E123
+    E501 # line too long
+
+; select=
+;     E123
+
+exclude=
+    .history
+    __pycache__
+    env
+    .env
+    .eggs

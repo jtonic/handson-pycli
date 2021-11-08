@@ -10,7 +10,7 @@
                 "hello",
                 "--count=3",
             ],
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
         },
         {
             "name": "Python: Pytest",

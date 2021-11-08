@@ -1,10 +1,63 @@
+; A good configuration file example
+; https://www.getcodeflow.com/pylint-configuration.html
+
 [MASTER]
 load-plugins=pylint_json2html
 disable=
     C0114, # missing-module-docstring
     C0115, # Missing class docstring (missing-class-docstring)
     C0116, # Missing function or method docstring
+    C0209, # Formatting a regular string which could be a f-string
+    R0903, # Too few public methods
+    W0613, # Unused argument
+; jobs=0
+
 
 [REPORTS]
+# Python expression which should return a note less than 10 (10 is the highest
+# note). You have access to the variables errors warning, statement which
+# respectively contain the number of errors / warnings messages and the total
+# number of statements analyzed. This is used by the global evaluation report
+# (RP0004).
+evaluation=10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)
+
+# Template used to display messages. This is a python new-style format string
+# used to format the message information. See doc for all details.
+msg-template={path}:{line}:{column}: {msg_id}: {msg} ({symbol})
+
+# Set the output format. Available formats are text, parseable, colorized, json
+# and msvs (visual studio). You can also give a reporter class, e.g.
+output-format=text
+# mypackage.mymodule.MyReporterClass.
 # output-format=jsonextended
-output-format=json
+
+
+# Tells whether to display a full report or only the messages.
+reports=no
+
+# Activate the evaluation score.
+score=no
+
+[MESSAGES CONTROL]
+# Enable the message, report, category or checker with the given id(s). You can
+# either give multiple identifier separated by comma (,) or put this option
+# multiple time.
+#enable=
+
+# Disable the message, report, category or checker with the given id(s). You
+# can either give multiple identifier separated by comma (,) or put this option
+# multiple time (only on the command line, not in the configuration file where
+# it should appear only once).
+#disable=
+
+
+[REFACTORING]
+# Maximum number of nested blocks for function / method body
+max-nested-blocks=5
+
+# Complete name of functions that never returns. When checking for
+# inconsistent-return-statements if a never returning function is called then
+# it will be considered as an explicit return statement and no message will be
+# printed.
+never-returning-functions=sys.exit
+

@@ -18,7 +18,10 @@
 - [x] simple cli to render a Jinja2 template
 - [ ] Include data files from file system in the source and binary distributions
 - [ ] run test with different pyenv/virtualenv configurations with tox
-- [x] configure the pylint
+- [x] configure linters:
+  - [x] pylint  (should I keep this lint?!)
+  - [x] flake8  (type hints)
+  - [x] mypy    (type hints)
 - [ ] pytest-bdd gherkin example (test the support in idea)
 - [x] create a python script for simple py-cli
 - [ ] publish the python script on pypi
@@ -91,16 +94,28 @@ eval "$(_PYCLI_COMPLETE=source pycli)"
   - [here](https://click.palletsprojects.com/en/6.x/bashcomplete/#activation)
   - [here](https://stackoverflow.com/a/52286575/1102761)
 
+## Python linting
+
+### pylint
 
 - run pylint
 
 ```shell script
-  pylint src/main/pycli/ --output-format=text
-  # or run it with html report
-  pylint src/main/pycli/ | pylint-json2html -o pylint.html
+    pylint src/ --output-format=text
+    # or run it with html report
+    pylint src/ | pylint-json2html -o pylint.html
 ```
 
-Caveats:
+
+### mypy (check type hints)
+
+- run mypy (with the option to install libraries/dependencies types)
+
+```shell script
+    mypy .  --install-types
+```
+
+## Caveats:
 
 - If python cannot be installed because curl doesn't support https protocol try this
 
@@ -127,3 +142,13 @@ eval "$(pyenv init -)"
 ## References
 
 - [here](./references.md)
+
+## Further reading
+
+- [Python best practices for a new project](https://mitelman.engineering/blog/python-best-practice/automating-python-best-practices-for-a-new-project/)
+- [I use pylint no longer ](https://dmerej.info/blog/post/bye-bye-pylint/)
+- [Linting entire vscode project](https://gredowski.com/blogging/2021/02/21/linting-whole-project-in-vscode.html#additional-tasks)
+- [pylint] https://pylint.pycqa.org/en/latest/user_guide/message-control.html
+- [mypy configuration](https://mypy.readthedocs.io/en/stable/config_file.html)
+- [flake8 codes](https://flake8.pycqa.org/en/latest/user/error-codes.html)
+- [python packages](https://timothybramlett.com/How_to_create_a_Python_Package_with___init__py.html)

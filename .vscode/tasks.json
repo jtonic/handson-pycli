@@ -1,0 +1,105 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "mypy-whole-project",
+            "type": "shell",
+            "command": "mypy . --config-file=${workspaceFolder}/mypy.ini --show-column-numbers --show-error-codes --ignore-missing-imports  --no-error-summary",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true,
+                "revealProblems": "always"
+            },
+            "problemMatcher": {
+                "owner": "mypy",
+                "source": "mypy-whole-project",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.+):(\\d+):(\\d+): (\\w+): (.+) \\[([\\w-]+)\\]$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "code": 6,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "flake8-whole-project",
+            "type": "shell",
+            "command": "flake8 --config=${workspaceFolder}/.flake8",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true,
+                "revealProblems": "onProblem"
+            },
+            "problemMatcher": {
+                "owner": "flake8",
+                "source": "flake8-whole-project",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    // ./src/main/pycli/application_conf.py:13:121: E501 line too long (139 > 120 characters)
+                    "regexp": "^(.+):(\\d+):(\\d+): ((\\w)\\d+) (.+)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "code": 4,
+                    "severity": 5,
+                    "message": 6
+                }
+            }
+        },
+        {
+            "label": "pylint-whole-project",
+            "type": "shell",
+            "command": "pylint src/ --rcfile=${workspaceFolder}/.pylintrc  --output-format=parseable",
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true,
+                "revealProblems": "onProblem",
+            },
+            "problemMatcher": {
+                "owner": "pylint",
+                "source": "pylint-whole-project",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    // src/main/pycli/main.py: 3: 0: E0611: No name 'render' in module 'pycli.template' (no-name-in-module)
+                    // src/main/tmp/ex_regexp.py: 23: 8: W0612: Unused variable 'delete_id' (unused-variable)
+                    // src/main/pycli/deleteit.py: 9: 0: R0205: Class 'User' inherits from object, can be safely removed from bases in python3 (useless-object-inheritance)
+                    // src/main/pycli/template.py: 3: 0: W0611: Unused select_autoescape imported from jinja2 (unused-import)
+                    "regexp": "^(.+): (\\d+): (\\d+): ((\\w)\\d+): (.+)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "code": 4,
+                    "severity": 5,
+                    "message": 6
+                }
+            }
+        }
+    ]
+}

@@ -29,6 +29,7 @@ setup(
             "click-completion==0.5.2",
             "mypy==0.910",
             "pytest-mypy==0.8.1",
+            "flake8==4.0.1",
         ]
     ),
     package_data={"": ["*.yaml", "*.html"]},
