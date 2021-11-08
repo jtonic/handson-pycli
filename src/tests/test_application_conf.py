@@ -15,3 +15,9 @@ def test_parse():
 
     assert app.name == "PyCli"
     assert app.description == APP_DESCRIPTION
+
+
+def test_mypy():
+    app: Application = Application(name="Playgroung", description="Playground project")
+    assert app.name == "Playgroung"
+    assert app.description == "Playground project"

@@ -2,6 +2,9 @@ import click
 import click_completion
 from pycli.template import render
 
+from tmp.deleteit3 import Teacher
+
+
 click_completion.init()
 
 
@@ -29,16 +32,17 @@ def main():
     required=True,
     show_default=True,
 )
-def _hello(count: int, name: str):
+def _hello(count: int, name: str) -> None:
     """It greets NAME for a total of COUNT times"""
     for _ in range(count):
-        click.echo(f"Hello {name}")
+        click.secho(f"Good {name}", fg="green")
+        click.secho(f"Bad {name}", fg="red", bold=True)
 
 
 @main.command("sum")
 @click.option("-a", prompt="a", help="First operand", type=int, required=True)
 @click.option("-b", prompt="b", help="2nd operand", type=int, required=True)
-def _sum(a: int, b: int):  # pylint: disable=C0103
+def _sum(a: int, b: int) -> None:  # pylint: disable=C0103
     """
     Sum a and b.
 
@@ -70,7 +74,7 @@ def _sum(a: int, b: int):  # pylint: disable=C0103
     required=True,
     show_default=True,
 )
-def produce_message(templates_dir: str, template_file: str):
+def produce_message(templates_dir: str, template_file: str) -> None:
     """Produce a message by rendering a template"""
     content = render(templates_dir=templates_dir, template_file=template_file)
     click.echo(f"Rendered content: {content}")

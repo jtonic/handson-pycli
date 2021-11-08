@@ -15,4 +15,5 @@ def render(templates_dir, template_file):
     )
     template = env.get_template(template_file)
     html = template.render({"title": "Tool", "header": "Menu", "body": "CD Pipeline"})
+
     return html

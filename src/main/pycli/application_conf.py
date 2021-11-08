@@ -25,7 +25,7 @@ def parse(conf: dict) -> Application:
 
 
 def load_conf() -> Application:
-    with open(CONFIG_PATH) as file:
+    with open(CONFIG_PATH, encoding="utf8") as file:
         yaml.add_path_resolver(tag="!application", path=["application"], kind=dict)
         conf = yaml.load(file, Loader=yaml.FullLoader)
         print(f"Configuration: {conf}")
