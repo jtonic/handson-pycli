@@ -17,6 +17,7 @@ setup(
         "Jinja2==3.0.2",
         "confluent-kafka==1.7.0",
         "avro==1.11.0",
+        "pendulum==2.1.2",
     ],
     setup_requires=["pytest-runner>=5.2"],
     extras_require=dict(
