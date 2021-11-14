@@ -18,6 +18,9 @@ setup(
         "confluent-kafka==1.7.0",
         "avro==1.11.0",
         "pendulum==2.1.2",
+        "numpy==1.21.4",
+        "pandas==1.3.4",
+        "matplotlib==3.4.3",
     ],
     setup_requires=["pytest-runner>=5.2"],
     extras_require=dict(
@@ -31,6 +34,7 @@ setup(
             "mypy==0.910",
             "pytest-mypy==0.8.1",
             "flake8==4.0.1",
+            "ipykernel==6.5.0",
         ]
     ),
     package_data={"": ["*.yaml", "*.html"]},

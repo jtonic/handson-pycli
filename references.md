@@ -44,6 +44,7 @@
 ## Documentation references
 
 - [pyenv issue when installed with brew](https://stackoverflow.com/a/34156303/1102761)
+- [Redirect output - print/click.echo() to noop / print nothing](https://exceptionshub.com/redirecting-stdout-to-nothing-in-python.html)]
 - [setuptools - entry_points](https://stackoverflow.com/a/9615473/1102761)
 - [pyenv intro](https://realpython.com/intro-to-pyenv/)
 - [visual pytest-ing in Idea/Pycharm](https://blog.jetbrains.com/pycharm/2020/06/visual-testing-with-pytest/)

@@ -2,8 +2,6 @@ import click
 import click_completion
 from pycli.template import render
 
-from tmp.deleteit3 import Teacher
-
 
 click_completion.init()
 

@@ -17,10 +17,12 @@
     "triggerTaskOnSave.tasks": {
         "flake8-whole-project": [
             "**/*.*py",
+            "**/*.*ipynb",
             ".flake8"
         ],
         "mypy-whole-project": [
             "**/*.*py",
+            "**/*.*ipynb",
             "mypy.ini"
         ],
     },
@@ -28,5 +30,11 @@
     "triggerTaskOnSave.showBusyIndicator": true,
     "triggerTaskOnSave.restart": true,
     // "python.defaultInterpreterPath": "${(pyenv root)}/version",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "jupyter.kernels.filter": [
+        {
+            "path": "~/.pyenv/versions/3.9.2/bin/python",
+            "type": "pythonEnvironment"
+        }
+    ]
 }
