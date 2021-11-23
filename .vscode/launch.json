@@ -13,6 +13,21 @@
             "console": "integratedTerminal",
         },
         {
+            "name": "Python: Pycli (produce-message)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/main/pycli/main.py",
+            "args": [
+                "produce-message",
+                "--templates-dir=${workspaceFolder}/templates",
+                "--template-file=index.html.j2",
+            ],
+            "console": "integratedTerminal",
+            "autoReload": {
+                "enable": true
+            }
+        },
+        {
             "name": "Python: Pytest",
             "type": "python",
             "request": "launch",
