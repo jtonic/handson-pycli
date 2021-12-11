@@ -21,6 +21,7 @@ setup(
         "numpy==1.21.4",
         "pandas==1.3.4",
         "matplotlib==3.4.3",
+        "pydantic==1.8.2",
     ],
     setup_requires=["pytest-runner>=5.2"],
     extras_require=dict(
