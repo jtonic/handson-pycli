@@ -2,7 +2,7 @@ version: "3"
 
 services:
     zookeeper:
-        image: confluentinc/cp-zookeeper:${TAG}
+        image: registry-all.docker.ing.net/confluentinc/cp-zookeeper:${TAG}
         hostname: zookeeper
         container_name: zookeeper
         ports:
@@ -12,7 +12,7 @@ services:
             ZOOKEEPER_TICK_TIME: 2000
 
     broker_1:
-        image: confluentinc/cp-server:${TAG}
+        image: registry-all.docker.ing.net/confluentinc/cp-server:${TAG}
         hostname: broker_1
         container_name: broker_1
         depends_on:
@@ -26,6 +26,8 @@ services:
             KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker_1:29092,PLAINTEXT_HOST://localhost:9092
             KAFKA_METRIC_REPORTERS: io.confluent.metrics.reporter.ConfluentMetricsReporter
             KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+            KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+            KAFKA_DELETE_TOPIC_ENABLE: "true"
             KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
             KAFKA_CONFLUENT_LICENSE_TOPIC_REPLICATION_FACTOR: 1
             CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: broker_1:29092
@@ -35,7 +37,7 @@ services:
             CONFLUENT_SUPPORT_CUSTOMER_ID: "anonymous"
 
     broker_2:
-        image: confluentinc/cp-server:${TAG}
+        image: registry-all.docker.ing.net/confluentinc/cp-server:${TAG}
         hostname: broker_2
         container_name: broker_2
         depends_on:
@@ -49,6 +51,8 @@ services:
             KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker_2:29092,PLAINTEXT_HOST://localhost:9093
             KAFKA_METRIC_REPORTERS: io.confluent.metrics.reporter.ConfluentMetricsReporter
             KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+            KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+            KAFKA_DELETE_TOPIC_ENABLE: "true"
             KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
             KAFKA_CONFLUENT_LICENSE_TOPIC_REPLICATION_FACTOR: 1
             CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: broker_2:29092
@@ -58,7 +62,7 @@ services:
             CONFLUENT_SUPPORT_CUSTOMER_ID: "anonymous"
 
     kafka-tools:
-        image: confluentinc/cp-kafka:${TAG}
+        image: registry-all.docker.ing.net/confluentinc/cp-kafka:${TAG}
         hostname: kafka-tools
         container_name: kafka-tools
         # network_mode: "host"
@@ -78,7 +82,7 @@ services:
               kafka-topics --bootstrap-server broker_1:29092,broker_2:29092 --list
             "
     schema-registry:
-        image: confluentinc/cp-schema-registry:${TAG}
+        image: registry-all.docker.ing.net/confluentinc/cp-schema-registry:${TAG}
         hostname: schema-registry
         container_name: schema-registry
         depends_on:
@@ -91,7 +95,7 @@ services:
             SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: "zookeeper:2181"
 
     control-center:
-        image: confluentinc/cp-enterprise-control-center:${TAG}
+        image: registry-all.docker.ing.net/confluentinc/cp-enterprise-control-center:${TAG}
         hostname: control-center
         container_name: control-center
         depends_on:
