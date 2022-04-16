@@ -38,7 +38,7 @@ setup(
             "pylint-json2html==0.3.0",
             "click-completion==0.5.2",
             "mypy==0.910",
-            "pytest-mypy==0.8.1",
+            "pytest-mypy==0.9.1",
             "flake8==4.0.1",
             "ipykernel==6.5.0",
         ]
