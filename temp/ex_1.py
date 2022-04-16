@@ -1,3 +1,8 @@
+import chime
+import numpy as np
+from itertools import count
+
+
 # Ctrl Shift a to use the useful arepl in vs code (you are gonna like it)
 
 #$end
@@ -6,12 +11,12 @@ print("\nRead a file")
 filename = "data.txt"
 text = "".join([line for line in open(filename)])
 print(text)
-text = acc = ""; [acc := acc + line for line in open(filename)]
+acc = ""
+text = [acc := acc + line for line in open(filename)]
 print(text)
 
 
 print("\nSound with chime")
-import chime
 chime.theme('mario')
 
 # chime.warning()
@@ -22,8 +27,7 @@ chime.success()
 
 print("\nTranspose a matrix")
 
-import numpy as np
-nums = [[1,2,3], [4,5,6], [7,8,9]]
+nums = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 transpose_matrix = [list(item) for item in zip(*nums)]
 print(transpose_matrix)
 mat = np.matrix(nums)
@@ -34,11 +38,10 @@ print(transpose_matrix_2)
 print("\nFibonacci")
 n = 10
 fib1 = [1, 2]
-[fib1.append(fib1[-1]+fib1[-2]) for _ in range(n-2)]
+[fib1.append(fib1[-1] + fib1[-2]) for _ in range(n - 2)]
 fib1
-l = len(fib1)
+ln = len(fib1)
 
-from itertools import count
 pairs = dict(zip(count(1), fib1))
 
 
@@ -50,12 +53,17 @@ print(splited_input)
 
 
 print("\nSum of the number's digits")
-digits_sum_fun = lambda x: sum(map(int, str(x)))
+
+
+def digits_sum_fun(x: int) -> int:
+    return sum(map(int, str(x)))
+
+
 digits_sum = digits_sum_fun(123)
 print(digits_sum)
 
 print("\nFlatten")
-numbers = [[1], [2,3], [4,5,6], [7,8,9]]
+numbers = [[1], [2, 3], [4, 5, 6], [7, 8, 9]]
 flatten = [item for sublist in numbers for item in sublist]
 print(flatten)
 
@@ -71,6 +79,5 @@ siblings = {**dic1, **dic2}
 print(siblings)
 
 print("\nSwapped maps")
-swapped  = {v:k for k, v in siblings.items()}
+swapped = {v: k for k, v in siblings.items()}
 print(swapped)
-

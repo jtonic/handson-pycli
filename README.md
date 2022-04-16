@@ -33,11 +33,11 @@
 - install the dev dependencies
 
 ```shell script
-    pip install -e '.[dev]' # sh
+    python -m pip install -e '.[dev]' # sh
     # OR
-    pip install -e .[dev] # shell
+    python -m pip install -e .[dev] # shell
     # OR even better
-    pip install -r requirements.txt
+    python -m pip install -r requirements.txt
 ```
 
 - Create the python script command
@@ -65,7 +65,7 @@
     # OR
     python -m pytest
     # OR
-    pytest --html=tests_report.html
+    python -m pytest --html=tests_report.html
 ```
 
 - run pycli command
