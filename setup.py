@@ -23,6 +23,8 @@ setup(
         "dingsound==0.0.5",
         "chime",
         "tqdm",
+        "aiohttp==3.8.1",
+        "colorama==0.4.4",
         # "confluent-kafka==1.7.0",
         # "avro==1.11.0",
     ],
