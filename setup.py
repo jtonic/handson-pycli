@@ -14,7 +14,7 @@ setup(
     install_requires=[
         "click==8.0.3",
         "pyyaml==5.3",
-        "Jinja2==3.0.2",
+        "Jinja2==3.1.4",
         "pendulum==2.1.2",
         "numpy==1.22.0",
         "pandas==1.3.4",
