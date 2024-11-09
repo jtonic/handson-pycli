@@ -19,7 +19,7 @@ setup(
         "numpy==1.22.0",
         "pandas==1.3.4",
         "matplotlib==3.4.3",
-        "pydantic==1.8.2",
+        "pydantic==1.10.13",
         "dingsound==0.0.5",
         "chime",
         "tqdm",
