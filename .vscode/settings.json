@@ -31,12 +31,6 @@
     "triggerTaskOnSave.restart": true,
     // "python.defaultInterpreterPath": "${(pyenv root)}/version",
     "editor.formatOnSave": true,
-    "jupyter.kernels.filter": [
-        {
-            "path": "~/.pyenv/versions/3.9.2/bin/python",
-            "type": "pythonEnvironment"
-        }
-    ],
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#303030",
         "activityBar.activeBorder": "#606020",
@@ -54,7 +48,11 @@
         "titleBar.activeBackground": "#171717",
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#17171799",
-        "titleBar.inactiveForeground": "#e7e7e799"
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "commandCenter.border": "#e7e7e799"
     },
-    "peacock.color": "#171717"
+    "peacock.color": "#171717",
+    "jupyter.kernels.excludePythonEnvironments": [
+        "~/.pyenv/versions/3.9.2/bin/python"
+    ]
 }

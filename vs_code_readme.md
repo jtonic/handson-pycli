@@ -1,8 +1,9 @@
-# VS code configuration:
+# VS code configuration
 
-- preffered formatter: black
+- preferred formatter: black
 
   User settings
+
 ```json
   "[python]": {
     // "editor.defaultFormatter": "ms-python.vscode-pylance",
@@ -37,7 +38,6 @@
     "python.formatting.provider": "black",
  }
 ```
-
 
 - [Formatting](https://code.visualstudio.com/docs/python/editing#_formatterspecific-settings)
 

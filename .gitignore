@@ -24,3 +24,5 @@ pylint.html
 tests_report.html
 .coverage
 htmlcov/
+
+.tmp/
