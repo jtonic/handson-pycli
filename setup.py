@@ -16,7 +16,7 @@ setup(
         "pyyaml==5.3",
         "Jinja2==3.0.2",
         "pendulum==2.1.2",
-        "numpy==1.21.4",
+        "numpy==1.22.0",
         "pandas==1.3.4",
         "matplotlib==3.4.3",
         "pydantic==1.8.2",
